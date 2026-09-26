@@ -2,6 +2,7 @@
 
 ### Improvements
 
+* Add `identifier` to `Semantics` so native accessibility tools and widget tests can match a stable ID (Android `resource-id`, iOS `accessibilityIdentifier`, web `flt-semantics-identifier`) instead of visible labels, plus `Tester.find_by_semantics_identifier()` ([#6832](https://github.com/flet-dev/flet/pull/6832)) by @mccre110.
 * `flet run` and `ft.run()` now print a warning with the desktop client's path when they use one from a previous `flet build` in `build/<platform>`, so an outdated client that lacks an extension is easy to spot ([#6821](https://github.com/flet-dev/flet/issues/6821)) by @ndonkoHenri.
 * `flet build` and `flet debug` pass the arguments that follow a `--` separator to Flutter, e.g. `flet build apk -- --obfuscate --split-debug-info=build/symbols`, as an alternative to repeating `--flutter-build-args` ([#6879](https://github.com/flet-dev/flet/pull/6879)) by @ndonkoHenri.
 * `flet pack` passes the arguments that follow a `--` separator to PyInstaller, e.g. `flet pack main.py -- --clean`, as an alternative to repeating `--pyinstaller-build-args` ([#6879](https://github.com/flet-dev/flet/pull/6879)) by @ndonkoHenri.
